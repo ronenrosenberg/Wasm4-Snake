@@ -30,8 +30,6 @@ void snake_update(Snake* snake) {
     const int new_y = snake->body[0].y + snake->direction.y;
     snake->body[0].x = ((new_x % 20) + 20) % 20; //snake wraps
     snake->body[0].y = ((new_y % 20) + 20) % 20;
-
-
 }
 
 void snake_draw(Snake* snake) {
@@ -53,7 +51,6 @@ int snake_collision(Snake* snake) {
         }
     }
     return 0;
-
 }
 
 int fruit_handler(Point* fruit, Snake* snake) {
@@ -95,6 +92,7 @@ void input(const uint8_t* gamepad, Snake* snake) {
         }
     }
 }
+
 
 Snake snake;
 Point fruit;
